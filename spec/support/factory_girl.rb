@@ -1,4 +1,9 @@
 require 'factory_girl'
+require 'factory_girl_rails'
+
+Dir["#{File.dirname(__FILE__)}/factories/**/*.rb"].each do |f|
+  require f
+end
 
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
