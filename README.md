@@ -1,4 +1,7 @@
 # BaseForm
+[![Code Climate](https://codeclimate.com/github/andrerpbts/base_form/badges/gpa.svg)](https://codeclimate.com/github/andrerpbts/base_form)
+[![Test Coverage](https://codeclimate.com/github/andrerpbts/base_form/badges/coverage.svg)](https://codeclimate.com/github/andrerpbts/base_form/coverage)
+
 A simple and small form objects Rails plugin.
 
 ## Installation
