@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 require 'rails/all'
 require 'rspec/rails'
 require 'support/test_app/config/environment'
