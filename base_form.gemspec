@@ -16,6 +16,6 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.add_runtime_dependency 'activesupport'
-  s.add_runtime_dependency 'virtus'
+  s.add_runtime_dependency 'activesupport', '~> 0'
+  s.add_runtime_dependency 'virtus', '~> 1.0'
 end

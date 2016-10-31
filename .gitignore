@@ -6,3 +6,4 @@ spec/support/test_app/db/*.sqlite3-journal
 spec/support/test_app/log/*.log
 spec/support/test_app/tmp/
 coverage/
+*.gem
