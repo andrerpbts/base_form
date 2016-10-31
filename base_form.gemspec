@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = BaseForm::VERSION
   s.authors     = ["andrerpbts"]
   s.email       = ["andrerpbts@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/andrerpbts/base_form"
   s.summary     = "A simple and small form objects Rails plugin"
   s.description = "BaseForm is a small and simple Rails plugin to work with Form Objects"
   s.license     = "MIT"
