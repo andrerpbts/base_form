@@ -1,4 +1,13 @@
 module BaseForm
+  # This class is the main core functionality, by being an inheritable
+  # class, which controls the form attributes assignments, validations
+  # and persisting.
+  #
+  # Basically you should create your own Form Object Class, and inherit
+  # this class (BaseForm::Form). After that you should put all records
+  # in the `@form_records` variable, through `use_form_records` class
+  # method. In your `persist` method implementation, just create the
+  # record objects associating it to each variable in `form_records.`
   class Form
     include ActiveModel::Model
     include Virtus.model
@@ -19,6 +28,12 @@ module BaseForm
       new(*params).save
     end
 
+    # This method will make the tings happen. It'll try run validations
+    # set in your form class, and if it passes, it'll run your persist
+    # instructions in a block of ActiveRecord transaction. If some
+    # record fails it's persistence/validation, then a rollback will be
+    # raised, the form will return those errors grouped in it. Otherwise
+    # everything is commited and `persisted?` method will return true.
     def save
       perform_in_transaction { persist } if valid?
 

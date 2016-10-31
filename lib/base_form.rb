@@ -7,5 +7,4 @@ require 'virtus'
 require 'base_form/form'
 
 module BaseForm
-  # Your code goes here...
 end
