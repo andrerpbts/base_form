@@ -30,7 +30,7 @@ solution to deliver those records in a fun and maintenable code.
 
 Actually, there's a lot of another gems to do that, like the great
 [reform](https://github.com/apotonick/reform) or
-[activeform-rails]https://github.com/GCorbel/activeform-rails', which are a more complete
+[activeform-rails](https://github.com/GCorbel/activeform-rails), which are a more complete
 solution for this problem. But, if you are looking for something lighter, maybe this
 gem could fit well for you.
 
