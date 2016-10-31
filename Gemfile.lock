@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    base_form (0.1.0)
+    base_form (0.1.1)
       activesupport (>= 3.2)
       virtus (~> 1.0)
 

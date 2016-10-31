@@ -5,6 +5,18 @@
 
 A simple and small Form Objects Rails plugin for ActiveRecord based projects.
 
+## Why?
+In a development day-to-day basis, we commonly are confronted with situations where we
+need to save data in more than one database table, running it's own validations, and
+the validations of the all context together. In most cases a Form Object is a perfect
+solution to deliver those records in a fun and maintenable code.
+
+Actually, there's a lot of another gems to do that, like the great
+[reform](https://github.com/apotonick/reform) or
+[activeform-rails](https://github.com/GCorbel/activeform-rails), which are a more complete
+solution for this problem. But, if you are looking for something lighter, maybe this
+gem could fit well for you.
+
 ## Installation
 Add this line to your application's Gemfile:
 
@@ -23,18 +35,7 @@ $ gem install base_form
 ```
 
 ## Usage
-In a development day-to-day basis, we commonly are confronted with situation where we
-need to save data in more than one database table, running it's own validations, and
-the validations of the all context together. In most cases a Form Object is a perfect
-solution to deliver those records in a fun and maintenable code.
-
-Actually, there's a lot of another gems to do that, like the great
-[reform](https://github.com/apotonick/reform) or
-[activeform-rails](https://github.com/GCorbel/activeform-rails), which are a more complete
-solution for this problem. But, if you are looking for something lighter, maybe this
-gem could fit well for you.
-
-That said, let me show some simple examples to you. Let's suppose you want to create a
+Let's suppose you want to create a
 signup form (you can check this example in the dummy app on this gem specs), with
 receiving a user email, a user password, a user password confirmation, and a plan. In your
 signup form, you need to create an account for this user, associate it to a entrance plan
@@ -76,18 +77,19 @@ class SignupForm < BaseForm::Form
 end
 ```
 
-Now you may be asking: What about email and password? Did not should be validated as well?
-Well, you could, in fact, perform all validations in this form, but sometimes this can happen.
+Now you may be asking: What about email and password? Shouldn't they be validated as well?
+Well, you could, in fact, add all validations in this form instead put it in your models,
+but sometimes you don't have much control of that.
 Then, I'm showing here the case that `User` model has those validations. Don't be mad ok? :)
 
 The form validations are the first validations tha are performed before it try to persist
 something here. If this validation fails, for an example, the persist method will not even
-be called, and the talk is over. Otherwise, it wil try to persist your logic, that we'll
+be called, and we're done with it. Otherwise, it wil try to persist your logic, which we'll
 implement next.
 
 Ok, now, you need to set the records that you will persist here.
 In this case is the `:user` you want to save, and the `:account` you will want to associate
-to this user. So, you put it there (I recommend you let this in the top of the class to make
+to this user. So, you add it there (I recommend you let this in the top of the class to make
 it clear):
 
 ```ruby
@@ -98,11 +100,11 @@ class SignupForm < BaseForm::Form
 end
 ```
 
-This line will automatically generate `attr_readers` to each record there, and will add this
+This line will automatically generate `attr_readers` to each record there, and will add these
 symbols in an array called `form_records` in your class. To understand it better, let's talk
 about the `persist` implementation itself.
 
-By the rule, `persist` method is obligatory, and not implementing it, will cause your form
+By the rule, the `persist` method is obligatory, and not implementing it, will cause your form
 raise a `NotImplementedError` when calling `save` to it.
 
 All things written inside `persist` method, will automatically run in a ActiveRecord transaction,
