@@ -28,7 +28,7 @@ module BaseForm
       new(*params).save
     end
 
-    # This method will make the tings happen. It'll try run validations
+    # This method will make the things happen. It'll try run validations
     # set in your form class, and if it passes, it'll run your persist
     # instructions in a block of ActiveRecord transaction. If some
     # record fails it's persistence/validation, then a rollback will be
