@@ -2,8 +2,8 @@ PATH
   remote: .
   specs:
     base_form (0.1.0)
-      activesupport
-      virtus
+      activesupport (>= 4.2)
+      virtus (~> 1.0)
 
 GEM
   remote: https://rubygems.org/
