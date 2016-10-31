@@ -147,7 +147,7 @@ Are you still there? :D
 
 Let's see this class complete?
 
-```
+```ruby
 class SignupForm < BaseForm
   use_form_records :account, :user
 
