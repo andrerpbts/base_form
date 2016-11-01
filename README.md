@@ -107,9 +107,9 @@ about the `persist` implementation itself.
 By the rule, the `persist` method is obligatory, and not implementing it, will cause your form
 raise a `NotImplementedError` when calling `save` to it.
 
-All things written inside `persist` method, will automatically run in a ActiveRecord transaction,
-and if some record have its validation failed, this will perform a Rollback and deliver the form
-to you with those erros grouped through `errors` method, like any AR model you are already
+All things written inside `persist` method will automatically run in a ActiveRecord transaction,
+and if some record have its validation failed, this will perform a rollback and deliver the form
+to you with those errors grouped through `errors` method, like any AR model you are already
 familiar with.
 
 Let me stop to talk and show you something we can call as implementation of this:
@@ -136,13 +136,13 @@ class SignupForm < BaseForm::Form
 end
 ```
 
-So, here is the thing, see the variables names I've associated there, are the name os
-form_records I've defined before. It tries to create an account, setting a plan to it
+So, here is the thing: check the variables names I've associated there are the names of
+form_records I've defined before. It tries to create an account setting a plan to it
 and then tries to create a user associated to this brand new account.
 
-Is this `form_records` that will call each object associated here to check its errors,
-and group it in `errors` object in your form itself in case of some validation brakes,
-but if all is fine, the form instance is returned to you and you will be able to call
+This `form_records` will call each object associated here to check its errors,
+and group it in `errors` object in your form itself in case of some validation fails.
+If all is fine, the form instance is returned to you and you will be able to call
 methods like `persisted?`, `account`, `user`, `valid?` and etc...
 
 Are you still there? :D
@@ -178,8 +178,9 @@ class SignupForm < BaseForm
 end
 ```
 
-Hmmmm, seems to be good enough. I hope this helps someone in the same way it
-helped me. Thanks!
+Hmmm, this looks pretty nice!
+
+I hope this helps someone in the same way it helped me. Thanks!
 
 ## Contributing
 - Fork it
