@@ -115,9 +115,9 @@ about the <code>persist</code> implementation itself.</p>
 <p>By the rule, the <code>persist</code> method is obligatory, and not implementing it, will cause your form
 raise a <code>NotImplementedError</code> when calling <code>save</code> to it.</p>
 
-<p>All things written inside <code>persist</code> method, will automatically run in a ActiveRecord transaction,
-and if some record have its validation failed, this will perform a Rollback and deliver the form
-to you with those erros grouped through <code>errors</code> method, like any AR model you are already
+<p>All things written inside <code>persist</code> method will automatically run in a ActiveRecord transaction,
+and if some record have its validation failed, this will perform a rollback and deliver the form
+to you with those errors grouped through <code>errors</code> method, like any AR model you are already
 familiar with.</p>
 
 <p>Let me stop to talk and show you something we can call as implementation of this:</p>
@@ -142,13 +142,13 @@ familiar with.</p>
   <span class="pl-k">end</span>
 <span class="pl-k">end</span></pre></div>
 
-<p>So, here is the thing, see the variables names I've associated there, are the name os
-form_records I've defined before. It tries to create an account, setting a plan to it
+<p>So, here is the thing: check the variables names I've associated there are the names of
+form_records I've defined before. It tries to create an account setting a plan to it
 and then tries to create a user associated to this brand new account.</p>
 
-<p>Is this <code>form_records</code> that will call each object associated here to check its errors,
-and group it in <code>errors</code> object in your form itself in case of some validation brakes,
-but if all is fine, the form instance is returned to you and you will be able to call
+<p>This <code>form_records</code> will call each object associated here to check its errors,
+and group it in <code>errors</code> object in your form itself in case of some validation fails.
+If all is fine, the form instance is returned to you and you will be able to call
 methods like <code>persisted?</code>, <code>account</code>, <code>user</code>, <code>valid?</code> and etc...</p>
 
 <p>Are you still there? :D</p>
@@ -182,8 +182,9 @@ methods like <code>persisted?</code>, <code>account</code>, <code>user</code>, <
   <span class="pl-k">end</span>
 <span class="pl-k">end</span></pre></div>
 
-<p>Hmmmm, seems to be good enough. I hope this helps someone in the same way it
-helped me. Thanks!</p>
+<p>Hmmm, this looks pretty nice!</p>
+
+<p>I hope this helps someone in the same way it helped me. Thanks!</p>
 
 <h2>
 <a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h2>
