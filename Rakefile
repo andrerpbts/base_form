@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 begin
   require 'bundler/setup'
 rescue LoadError
@@ -15,4 +17,3 @@ RDoc::Task.new(:rdoc) do |rdoc|
 end
 
 require 'bundler/gem_tasks'
-
