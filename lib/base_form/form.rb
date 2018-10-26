@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module BaseForm
   # This class is the main core functionality, by being an inheritable
   # class, which controls the form attributes assignments, validations

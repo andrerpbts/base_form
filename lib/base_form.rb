@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # require dependencies gems
 require 'active_support'
 require 'active_model'
