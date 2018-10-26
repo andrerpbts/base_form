@@ -10,7 +10,7 @@ else
   end
 end
 
-require 'support/factory_girl'
+require 'support/factory_bot'
 require 'base_form'
 
 RSpec.configure do |config|

@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-require 'factory_girl'
-require 'factory_girl_rails'
+require 'factory_bot'
+require 'factory_bot_rails'
 
 Dir["#{File.dirname(__FILE__)}/factories/**/*.rb"].each do |f|
   require f
 end
 
 RSpec.configure do |config|
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
 
   config.before(:suite) do
-    FactoryGirl.find_definitions
+    FactoryBot.find_definitions
   end
 end
