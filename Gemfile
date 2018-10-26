@@ -6,7 +6,7 @@ gemspec
 
 gem 'bundler'
 gem 'codeclimate-test-reporter', require: nil
-gem 'factory_girl_rails', '~> 4.0'
+gem 'factory_bot_rails', '~> 4.0'
 gem 'rails'
 gem 'rspec-rails', '~> 3.5'
 gem 'rubocop', '~> 0.49.0', require: false
