@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rails', '~> 5.2'
   s.add_development_dependency 'rspec-rails', '~> 3.5'
   s.add_development_dependency 'rubocop', '0.77.0'
-  s.add_development_dependency 'sqlite3', '~> 1.3.13'
+  s.add_development_dependency 'sqlite3', '~> 1.4.1'
 
   s.add_runtime_dependency 'activesupport', '>= 3.2'
   s.add_runtime_dependency 'virtus', '~> 1.0'
