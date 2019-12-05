@@ -6,7 +6,7 @@ ENV['RAILS_ENV'] ||= 'test'
 require 'support/test_app/config/environment'
 
 # Prevent database truncation if the environment is production
-abort("The Rails environment is running in production mode!") if Rails.env.production?
+abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'rails/all'
 require 'rspec/rails'
 
@@ -24,5 +24,3 @@ ActiveRecord::Migration.maintain_test_schema!
 # - rake db:migrate
 ActiveRecord::Schema.verbose = false
 load 'support/test_app/db/schema.rb' # use db agnostic schema by default
-
-
