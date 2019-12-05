@@ -3,6 +3,7 @@ AllCops:
   Exclude:
     - 'spec/support/test_app/**/*'
     - !ruby/regexp /old_and_unused\.rb$/
+    - vendor/bundle/**/*
 
 Style/Documentation:
   Enabled: false
