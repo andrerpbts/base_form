@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-$LOAD_PATH.push File.expand_path('../lib', __FILE__)
+$LOAD_PATH.push File.expand_path('lib', __dir__)
 
 # Maintain your gem's version:
 require 'base_form/version'
@@ -18,9 +18,10 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
+  s.add_development_dependency 'bootsnap', '~> 1.0'
   s.add_development_dependency 'bundler', '~> 1.16'
   s.add_development_dependency 'factory_bot_rails', '~> 5.1'
-  s.add_development_dependency 'rails', '~> 5.1'
+  s.add_development_dependency 'rails', '~> 5.2'
   s.add_development_dependency 'rspec-rails', '~> 3.5'
   s.add_development_dependency 'rubocop', '0.77.0'
   s.add_development_dependency 'sqlite3', '~> 1.3.13'

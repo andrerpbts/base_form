@@ -3,11 +3,9 @@ AllCops:
   Exclude:
     - 'spec/support/test_app/**/*'
     - !ruby/regexp /old_and_unused\.rb$/
+    - vendor/bundle/**/*
 
-Rails:
-  Enabled: true
-
-Documentation:
+Style/Documentation:
   Enabled: false
 
 Metrics/AbcSize:
@@ -24,7 +22,10 @@ Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
 
-Style/PredicateName:
+Naming/PredicateName:
+  Enabled: false
+
+Naming/MemoizedInstanceVariableName:
   Enabled: false
 
 Style/AndOr:
@@ -44,3 +45,4 @@ Style/RedundantReturn:
 
 Style/Semicolon:
   AllowAsExpressionSeparator: true
+
