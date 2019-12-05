@@ -1,7 +1,7 @@
 # BaseForm
 [![Code Climate](https://codeclimate.com/github/andrerpbts/base_form/badges/gpa.svg)](https://codeclimate.com/github/andrerpbts/base_form)
 [![Test Coverage](https://codeclimate.com/github/andrerpbts/base_form/badges/coverage.svg)](https://codeclimate.com/github/andrerpbts/base_form/coverage)
-[ ![Codeship Status for andrerpbts/base_form](https://app.codeship.com/projects/8d9be4e0-811f-0134-3da7-7e60ebb19227/status?branch=master)](https://app.codeship.com/projects/182157)
+[![Build Status](https://travis-ci.org/andrerpbts/base_form.svg?branch=master)](https://travis-ci.org/andrerpbts/base_form)
 
 A simple and small Form Objects Rails plugin for ActiveRecord based projects.
 
