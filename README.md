@@ -11,7 +11,7 @@ need to save data in more than one database table, running it's own validations,
 the validations of the all context together. In most cases a Form Object is a perfect
 solution to deliver those records in a fun and maintenable code.
 
-Actually, there's a lot of another gems to do that, like the great
+Actually, there are a lot of options you can pick in terms of gems to do that, like the great
 [reform](https://github.com/apotonick/reform) or
 [activeform-rails](https://github.com/GCorbel/activeform-rails), which are a more complete
 solution for this problem. But, if you are looking for something lighter, maybe this
