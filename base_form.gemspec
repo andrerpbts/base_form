@@ -18,12 +18,13 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
-  s.add_development_dependency 'bootsnap', '~> 1.0'
-  s.add_development_dependency 'bundler', '~> 1.16'
-  s.add_development_dependency 'factory_bot_rails', '~> 5.1'
+  s.add_development_dependency 'bootsnap', '~> 1.4'
+  s.add_development_dependency 'bundler', '~> 2.1.4'
+  s.add_development_dependency 'factory_bot_rails', '~> 6.0'
+  s.add_development_dependency 'listen', '~> 3.0'
   s.add_development_dependency 'rails', '~> 5.2'
-  s.add_development_dependency 'rspec-rails', '~> 3.5'
-  s.add_development_dependency 'rubocop', '0.77.0'
+  s.add_development_dependency 'rspec-rails', '~> 4.0'
+  s.add_development_dependency 'rubocop', '0.86.0'
   s.add_development_dependency 'sqlite3', '~> 1.4.1'
 
   s.add_runtime_dependency 'activesupport', '>= 3.2'

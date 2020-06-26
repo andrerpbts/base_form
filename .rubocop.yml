@@ -1,5 +1,4 @@
 AllCops:
-  TargetRubyVersion: 2.3
   Exclude:
     - 'spec/support/test_app/**/*'
     - !ruby/regexp /old_and_unused\.rb$/
