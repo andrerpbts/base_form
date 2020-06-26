@@ -3,7 +3,7 @@
 require 'factory_bot'
 require 'factory_bot_rails'
 
-Dir["#{File.dirname(__FILE__)}/factories/**/*.rb"].each do |f|
+Dir["#{File.dirname(__FILE__)}/factories/**/*.rb"].sort.each do |f|
   require f
 end
 

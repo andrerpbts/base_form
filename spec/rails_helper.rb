@@ -11,7 +11,7 @@ require 'rails/all'
 require 'rspec/rails'
 
 # Require support files
-Dir[Rails.root.join('..', '*.rb')].each { |f| require f }
+Dir[Rails.root.join('..', '*.rb')].sort.each { |f| require f }
 
 # Require this lib
 require 'base_form'
