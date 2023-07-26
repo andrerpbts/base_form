@@ -1,8 +1,12 @@
 AllCops:
+  NewCops: enable
   Exclude:
     - 'spec/support/test_app/**/*'
     - !ruby/regexp /old_and_unused\.rb$/
     - vendor/bundle/**/*
+
+Gemspec/DevelopmentDependencies:
+  Enabled: false
 
 Style/Documentation:
   Enabled: false
@@ -62,6 +66,9 @@ Lint/RaiseException:
 
 Lint/StructNewOverride:
   Enabled: true
+
+Lint/ConstantDefinitionInBlock:
+  Enabled: false
 
 Style/ExponentialNotation:
   Enabled: true
